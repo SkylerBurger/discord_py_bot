@@ -18,6 +18,11 @@ class CogOne(commands.Cog):
 
     @commands.command()
     async def hello(self, ctx):
+        """This docstring will be presented to users when they type /help
+
+        You can let them know how to use the command and what results they'll
+        receive.
+        """
         username = str(ctx.message.author)
         message = f'Hello {username}!'
         await ctx.message.channel.send(message)
@@ -28,4 +33,4 @@ def setup(client):
     Args:
         client (discord.ext.commands.Bot): The bot to add the Cog to.
     """
-    client.add_cog(CogOne(client))
+    client.add_cog(CogOne())
