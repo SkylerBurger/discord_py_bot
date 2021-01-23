@@ -33,4 +33,4 @@ def setup(client):
     Args:
         client (discord.ext.commands.Bot): The bot to add the Cog to.
     """
-    client.add_cog(CogOne())
+    client.add_cog(CogOne(client))
